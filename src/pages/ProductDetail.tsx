@@ -162,7 +162,7 @@ const ProductDetail = () => {
                   disabled={!product.inStock}
                 >
                   <ShoppingCart className="w-5 h-5 mr-2" />
-                  Register Interest
+                  Add to Cart
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground mt-3">
