@@ -92,7 +92,7 @@ export const CartDrawer = () => {
                   size="lg" 
                   disabled={items.length === 0}
                 >
-                  Checkoutttt
+                  Checkout
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
                 <p className="text-xs text-center text-muted-foreground">
