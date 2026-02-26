@@ -67,7 +67,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             <div className="flex items-center gap-2">
               <CheckCircle className={`w-4 h-4 ${product.inStock ? 'text-primary' : 'text-muted-foreground'}`} />
               <span className={`text-sm font-semibold ${product.inStock ? 'text-primary' : 'text-muted-foreground'}`}>
-                {product.inStock ? "In Stock" : "Out of Stock"}
+                {product.comingsoon ? "Coming Soon" : product.inStock ? "In Stock" : "Out of Stock"}
               </span>
             </div>
             
@@ -75,7 +75,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
               size="sm"
               className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2"
               onClick={handleAddToCart}
-              disabled={!product.inStock}
+              disabled={!product.inStock || product.comingsoon}
             >
               <ShoppingCart className="w-4 h-4" />
               <span className="hidden sm:inline">Add</span>

@@ -9,6 +9,7 @@ export interface Product {
   description: string;
   image: string | null;
   inStock: boolean;
+  comingsoon?:boolean
   variants: ProductVariant[];
 }
 
@@ -31,6 +32,7 @@ export const products: Product[] = [
     description: "Body Protection Compound-157. A pentadecapeptide composed of 15 amino acids, widely studied for its regenerative and protective properties in research settings.",
     image: bpc157Img,
     inStock: true,
+    comingsoon:false,
     variants: [
       // { id: "bpc-157-5mg", title: "5mg", available: true },
       { id: "bpc-157-10mg", title: "10mg", available: true },
@@ -42,7 +44,8 @@ export const products: Product[] = [
     handle: "retatrutide",
     description: "A triple-agonist peptide targeting GIP, GLP-1, and glucagon receptors. Actively researched for metabolic applications in clinical studies.",
     image: retatrutideImg,
-    inStock: true,
+    inStock: false,
+    comingsoon:false,
     variants: [
       // { id: "retatrutide-5mg", title: "5mg", available: true },
       { id: "retatrutide-10mg", title: "10mg", available: true },
@@ -54,7 +57,8 @@ export const products: Product[] = [
     handle: "ghk-cu",
     description: "Copper peptide GHK-Cu, a naturally occurring tripeptide studied for its role in tissue remodeling, wound healing, and anti-inflammatory research.",
     image: ghkCuImg,
-    inStock: true,
+    inStock: false,
+    comingsoon:false,
     variants: [
       // { id: "ghk-cu-50mg", title: "50mg", available: true },
       { id: "ghk-cu-10mg", title: "10mg", available: true },
@@ -67,6 +71,7 @@ export const products: Product[] = [
     description: "Mitochondrial-derived peptide MOTS-C, a 16-amino acid peptide studied for its role in metabolic homeostasis and exercise mimetics research.",
     image: null,
     inStock: false,
+    comingsoon: true,
     variants: [
       { id: "mots-c-10mg", title: "10mg", available: true },
     ],
@@ -78,6 +83,7 @@ export const products: Product[] = [
     description: "Thymosin Beta-4 fragment, a 43-amino acid peptide researched for its potential in tissue repair, cell migration, and anti-inflammatory pathways.",
     image: null,
     inStock: false,
+    comingsoon: true,
     variants: [
       // { id: "tb-500-2mg", title: "2mg", available: true },
       { id: "tb-500-10mg", title: "10mg", available: true },
