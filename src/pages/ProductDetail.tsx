@@ -180,7 +180,7 @@ const ProductDetail = () => {
                   </div>
                   <div className="flex flex-col items-center text-center p-3 sm:p-4 glass-card group hover:border-primary/30 transition-all">
                     <Award className="w-5 h-5 sm:w-6 sm:h-6 text-primary mb-2 group-hover:scale-110 transition-transform" />
-                    <span className="text-[10px] sm:text-xs text-muted-foreground font-medium">COA Included</span>
+                    <span className="text-[10px] sm:text-xs text-muted-foreground font-medium">Janoshik Labs Tested</span>
                   </div>
                 </div>
               </div>
