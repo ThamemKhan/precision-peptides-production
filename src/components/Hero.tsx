@@ -61,7 +61,7 @@ export const Hero = () => {
             <div className="flex items-center justify-center gap-3 p-4 glass-card">
               <Award className="w-7 h-7 sm:w-8 sm:h-8 text-primary flex-shrink-0" />
               <div className="text-left">
-                <p className="font-semibold text-foreground text-sm sm:text-base">Janoshik Labs tested</p>
+                <p className="font-semibold text-foreground text-sm sm:text-base">Janoshik Labs Tested</p>
                 <p className="text-xs sm:text-sm text-muted-foreground">Every Order</p>
               </div>
             </div>
