@@ -1,7 +1,8 @@
 import bpc157Img from "@/assets/bpc-157.png";
 import retatrutideImg from "@/assets/retatrutide.png";
 import ghkCuImg from "@/assets/ghk-cu.png";
-
+import motsc from "@/assets/motsc.png";
+import tb500 from "@/assets/tb500.png";
 export interface Product {
   id: string;
   title: string;
@@ -44,7 +45,7 @@ export const products: Product[] = [
     handle: "retatrutide",
     description: "A triple-agonist peptide targeting GIP, GLP-1, and glucagon receptors. Actively researched for metabolic applications in clinical studies.",
     image: retatrutideImg,
-    inStock: false,
+    inStock: true,
     comingsoon:false,
     variants: [
       // { id: "retatrutide-5mg", title: "5mg", available: true },
@@ -57,7 +58,7 @@ export const products: Product[] = [
     handle: "ghk-cu",
     description: "Copper peptide GHK-Cu, a naturally occurring tripeptide studied for its role in tissue remodeling, wound healing, and anti-inflammatory research.",
     image: ghkCuImg,
-    inStock: false,
+    inStock: true,
     comingsoon:false,
     variants: [
       // { id: "ghk-cu-50mg", title: "50mg", available: true },
@@ -69,9 +70,9 @@ export const products: Product[] = [
     title: "MOTS-C",
     handle: "mots-c",
     description: "Mitochondrial-derived peptide MOTS-C, a 16-amino acid peptide studied for its role in metabolic homeostasis and exercise mimetics research.",
-    image: null,
-    inStock: false,
-    comingsoon: true,
+    image: motsc,
+    inStock: true,
+    comingsoon: false,
     variants: [
       { id: "mots-c-10mg", title: "10mg", available: true },
     ],
@@ -81,9 +82,9 @@ export const products: Product[] = [
     title: "TB-500",
     handle: "tb-500",
     description: "Thymosin Beta-4 fragment, a 43-amino acid peptide researched for its potential in tissue repair, cell migration, and anti-inflammatory pathways.",
-    image: null,
-    inStock: false,
-    comingsoon: true,
+    image: tb500,
+    inStock: true,
+    comingsoon: false,
     variants: [
       // { id: "tb-500-2mg", title: "2mg", available: true },
       { id: "tb-500-10mg", title: "10mg", available: true },
