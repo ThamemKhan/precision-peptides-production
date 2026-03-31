@@ -3,6 +3,7 @@ import retatrutideImg from "@/assets/retatrutide.png";
 import ghkCuImg from "@/assets/ghk-cu.png";
 import motsc from "@/assets/motsc.png";
 import tb500 from "@/assets/tb500.png";
+import hgh from "@/assets/hghedited.png";
 export interface Product {
   id: string;
   title: string;
@@ -88,6 +89,19 @@ export const products: Product[] = [
     variants: [
       // { id: "tb-500-2mg", title: "2mg", available: true },
       { id: "tb-500-10mg", title: "10mg", available: true },
+    ],
+  },
+  {
+    id: "hgh-191aa",
+    title: "HGH-191AA",
+    handle: "hgh-191aa",
+    description: "Human Growth Hormone fragment, a 191-amino acid peptide researched for its potential in muscle growth, fat loss, and anti-aging applications.",
+    image: hgh,
+    inStock: true,
+    comingsoon: false,
+    variants: [
+      // { id: "hgh-191aa-2mg", title: "2mg", available: true },
+      { id: "hgh-191aa-8mg", title: "8mg", available: true },
     ],
   },
 ];
