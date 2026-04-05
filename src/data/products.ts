@@ -63,7 +63,7 @@ export const products: Product[] = [
     comingsoon:false,
     variants: [
       // { id: "ghk-cu-50mg", title: "50mg", available: true },
-      { id: "ghk-cu-10mg", title: "10mg", available: true },
+      { id: "ghk-cu-100mg", title: "100mg", available: true },
     ],
   },
   {
