@@ -1,6 +1,6 @@
 import bpc157Img from "@/assets/bpc-157.png";
 import retatrutideImg from "@/assets/retatrutide.png";
-import ghkCuImg from "@/assets/ghk-cu.png";
+import ghkCuImg from "@/assets/GHKcu-100.png";
 import motsc from "@/assets/motsc.png";
 import tb500 from "@/assets/tb500.png";
 import hgh from "@/assets/hghedited.png";
