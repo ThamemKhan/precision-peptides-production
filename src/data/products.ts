@@ -4,6 +4,7 @@ import ghkCuImg from "@/assets/GHKcu-100.png";
 import motsc from "@/assets/motsc.png";
 import tb500 from "@/assets/tb500.png";
 import hgh from "@/assets/hghedited.png";
+import semax from "@/assets/Semax10mg.png";
 export interface Product {
   id: string;
   title: string;
@@ -102,6 +103,18 @@ export const products: Product[] = [
     variants: [
       // { id: "hgh-191aa-2mg", title: "2mg", available: true },
       { id: "hgh-191aa-8mg", title: "8mg", available: true },
+    ],
+  },
+  {
+    id: "semax",
+    title: "SEMAX",
+    handle: "semax",
+    description: "A synthetic heptapeptide (7 amino acids) derived from a fragment of the hormone ACTH, researched for its potential in cognitive enhancement, neuroprotection, and mood regulation.",
+    image: semax,
+    inStock: true,
+    comingsoon: false,
+    variants: [
+      { id: "semax-10mg", title: "10mg", available: true },
     ],
   },
 ];
