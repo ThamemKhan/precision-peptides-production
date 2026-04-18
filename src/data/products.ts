@@ -63,7 +63,7 @@ export const products: Product[] = [
     inStock: true,
     comingsoon:false,
     variants: [
-      // { id: "ghk-cu-50mg", title: "50mg", available: true },
+       { id: "ghk-cu-50mg", title: "50mg", available: true },
       { id: "ghk-cu-100mg", title: "100mg", available: true },
     ],
   },
@@ -101,8 +101,8 @@ export const products: Product[] = [
     inStock: true,
     comingsoon: false,
     variants: [
-      // { id: "hgh-191aa-2mg", title: "2mg", available: true },
-      { id: "hgh-191aa-8mg", title: "8mg", available: true },
+     { id: "hgh-191aa-24iu", title: "24IU", available: true },
+      { id: "hgh-191aa-10iu", title: "10IU", available: true },
     ],
   },
   {
