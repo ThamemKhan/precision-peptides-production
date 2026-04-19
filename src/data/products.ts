@@ -135,7 +135,7 @@ export const products: Product[] = [
     id: "pt141",
     title: "PT141",
     handle: "pt141",
-    description: "PT-141 (Bremelanotide) – a synthetic melanocortin receptor agonist peptide researched for its role in enhancing sexual arousal and libido via central nervous system pathways rather than hormonal mechanisms.",
+    description: "PT-141 (Bremelanotide) – a neuroactive peptide derived from melanocortins, known for enhancing libido in both men and women through central nervous system signaling.",
     image: pt141,
     inStock: true,
     comingsoon: false,
