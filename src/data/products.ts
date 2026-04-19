@@ -5,6 +5,8 @@ import motsc from "@/assets/motsc.png";
 import tb500 from "@/assets/tb500.png";
 import hgh from "@/assets/hghedited.png";
 import semax from "@/assets/Semax10mg.png";
+import selank from "@/assets/selank.png";
+import pt141 from "@/assets/pt141.png"
 export interface Product {
   id: string;
   title: string;
@@ -115,6 +117,30 @@ export const products: Product[] = [
     comingsoon: false,
     variants: [
       { id: "semax-10mg", title: "10mg", available: true },
+    ],
+  },
+  {
+    id: "selank",
+    title: "SELANK",
+    handle: "selank",
+    description: "a synthetic peptide derived from the tuftsin sequence, studied for its potential in reducing anxiety, improving mood stability, and supporting cognitive function without sedative effects.",
+    image: selank,
+    inStock: true,
+    comingsoon: false,
+    variants: [
+      { id: "selank-10mg", title: "10mg", available: true },
+    ],
+  },
+  {
+    id: "pt141",
+    title: "PT141",
+    handle: "pt141",
+    description: "PT-141 (Bremelanotide) – a synthetic melanocortin receptor agonist peptide researched for its role in enhancing sexual arousal and libido via central nervous system pathways rather than hormonal mechanisms.",
+    image: pt141,
+    inStock: true,
+    comingsoon: false,
+    variants: [
+      { id: "pt141-10mg", title: "10mg", available: true },
     ],
   },
 ];
