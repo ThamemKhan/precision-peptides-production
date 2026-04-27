@@ -48,11 +48,11 @@ export const Footer = () => {
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>precisionpeptidesonline@gmail.com</span>
               </li>
-              {/* <li className="flex items-center gap-3 text-muted-foreground text-sm">
+              <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>+91 93605 00020</span>
-              </li> */}
-              <li className="flex items-start gap-3 text-muted-foreground text-sm">
+              </li>
+              {/* <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Instagram className="w-5 h-5 text-primary flex-shrink-0" />
                 <a
     href="https://www.instagram.com/precision_peptides.in?igsh=MTV4YTZzY3BrcGNzbQ=="
@@ -63,9 +63,9 @@ export const Footer = () => {
     Follow us on Instagram
   </a>
 
-              </li>
+              </li> */}
 
-              {/* <li className="flex items-start gap-3 text-muted-foreground text-sm">
+              <li className="flex items-start gap-3 text-muted-foreground text-sm">
   <a
     href="https://wa.me/919360500020?text=Hello%20I%20want%20more%20details"
     target="_blank"
@@ -75,7 +75,7 @@ export const Footer = () => {
     <MessageCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
     <span>Chat with us on WhatsApp</span>
   </a>
-</li> */}
+</li>
 
               {/* <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0" />

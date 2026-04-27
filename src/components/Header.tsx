@@ -35,7 +35,7 @@ export const Header = () => {
             <Link to="/#about" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("about")}>About</Link>
             <Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("contact")}>Contact</Link>
             
-            <a
+            {/* <a
   href="https://www.instagram.com/precision_peptides.in/"
   target="_blank"
   rel="noopener noreferrer"
@@ -45,9 +45,9 @@ export const Header = () => {
 >
   <Instagram className="w-5 h-5" />
   Chat on Instagram
-</a>
+</a> */}
             
-            {/* <a
+            <a
   href="https://wa.me/919360500020?text=Hello%20I%20am%20interested%20in%20your%20products"
   target="_blank"
   rel="noopener noreferrer"
@@ -56,7 +56,7 @@ export const Header = () => {
 >
   <MessageCircle className="w-5 h-5" />
   Chat on WhatsApp
-</a> */}
+</a>
           </nav>
 
           <div className="flex items-center gap-4">
