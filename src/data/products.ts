@@ -36,8 +36,8 @@ export const products: Product[] = [
     handle: "bpc-157",
     description: "Body Protection Compound-157. A pentadecapeptide composed of 15 amino acids, widely studied for its regenerative and protective properties in research settings.",
     image: bpc157Img,
-    inStock: true,
-    comingsoon:false,
+    inStock: false,
+    comingsoon: true,
     variants: [
       // { id: "bpc-157-5mg", title: "5mg", available: true },
       { id: "bpc-157-10mg", title: "10mg", available: true },
@@ -49,8 +49,8 @@ export const products: Product[] = [
     handle: "retatrutide",
     description: "A triple-agonist peptide targeting GIP, GLP-1, and glucagon receptors. Actively researched for metabolic applications in clinical studies.",
     image: retatrutideImg,
-    inStock: true,
-    comingsoon:false,
+    inStock: false,
+    comingsoon: true,
     variants: [
       // { id: "retatrutide-5mg", title: "5mg", available: true },
       { id: "retatrutide-10mg", title: "10mg", available: true },
@@ -66,7 +66,7 @@ export const products: Product[] = [
     comingsoon:false,
     variants: [
        { id: "ghk-cu-50mg", title: "50mg", available: true },
-      { id: "ghk-cu-100mg", title: "100mg", available: true },
+      { id: "ghk-cu-100mg", title: "100mg - Coming soon", available: true },
     ],
   },
   {
@@ -75,8 +75,8 @@ export const products: Product[] = [
     handle: "mots-c",
     description: "Mitochondrial-derived peptide MOTS-C, a 16-amino acid peptide studied for its role in metabolic homeostasis and exercise mimetics research.",
     image: motsc,
-    inStock: true,
-    comingsoon: false,
+    inStock: false,
+    comingsoon: true,
     variants: [
       { id: "mots-c-10mg", title: "10mg", available: true },
     ],
@@ -103,7 +103,7 @@ export const products: Product[] = [
     inStock: true,
     comingsoon: false,
     variants: [
-     { id: "hgh-191aa-24iu", title: "24IU", available: true },
+     { id: "hgh-191aa-24iu", title: "24IU - Coming soon", available: false },
       { id: "hgh-191aa-10iu", title: "10IU", available: true },
     ],
   },
@@ -113,8 +113,8 @@ export const products: Product[] = [
     handle: "semax",
     description: "A synthetic heptapeptide (7 amino acids) derived from a fragment of the hormone ACTH, researched for its potential in cognitive enhancement, neuroprotection, and mood regulation.",
     image: semax,
-    inStock: true,
-    comingsoon: false,
+    inStock: false,
+    comingsoon: true,
     variants: [
       { id: "semax-10mg", title: "10mg", available: true },
     ],
