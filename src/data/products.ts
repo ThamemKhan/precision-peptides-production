@@ -7,6 +7,7 @@ import hgh from "@/assets/hghedited.png";
 import semax from "@/assets/Semax10mg.png";
 import selank from "@/assets/selank.png";
 import pt141 from "@/assets/pt141.png"
+import cjc_ipa from "@/assets/cjc_ipa.png"
 export interface Product {
   id: string;
   title: string;
@@ -141,6 +142,18 @@ export const products: Product[] = [
     comingsoon: false,
     variants: [
       { id: "pt141-10mg", title: "10mg", available: true },
+    ],
+  },
+  {
+    id: "cjc_ipa",
+    title: "CJC + IPA",
+    handle: "cjc_ipa",
+    description: "CJC + IPA (CJC-1295 + Ipamorelin) – a combination of two peptides researched for their potential in muscle growth, fat loss, and anti-aging applications.",
+    image: cjc_ipa,
+    inStock: true,
+    comingsoon: false,
+    variants: [
+      { id: "cjc_ipa-5mg/5mg", title: "5mg", available: true },
     ],
   },
 ];
