@@ -8,6 +8,8 @@ import { getProductByHandle } from "@/data/products";
 import { useCartStore } from "@/stores/cartStore";
 import { ArrowLeft, ShoppingCart, Minus, Plus, Shield, Truck, Award, Dna, Beaker, FlaskConical, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
+import { ProductReviews } from "@/components/ProductReviews";
+
 
 const ProductDetail = () => {
   const { handle } = useParams<{ handle: string }>();
@@ -186,6 +188,8 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
+          <ProductReviews productTitle={product.title} />
+
         </main>
 
         <Footer />
