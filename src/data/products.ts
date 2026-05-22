@@ -6,8 +6,11 @@ import tb500 from "@/assets/tb500.png";
 import hgh from "@/assets/hghedited.png";
 import semax from "@/assets/Semax10mg.png";
 import selank from "@/assets/selank.png";
-import pt141 from "@/assets/pt141.png"
-import cjc_ipa from "@/assets/cjc_ipa.png"
+import pt141 from "@/assets/pt141.png";
+import dsip from "@/assets/dsip.png";
+import cjc_ipa from "@/assets/cjc_ipa.png";
+import snap8 from "@/assets/snap8.png";
+import kisspeptine from "@/assets/kisspeptine.png"
 export interface Product {
   id: string;
   title: string;
@@ -154,6 +157,42 @@ export const products: Product[] = [
     comingsoon: false,
     variants: [
       { id: "cjc_ipa-5mg/5mg", title: "5mg", available: true },
+    ],
+  },
+  {
+    id: "dsip",
+    title: "DSIP",
+    handle: "dsip",
+    description: "DSIP (Drug-Sensitive Immunogenic Peptide) – a synthetic peptide researched for its potential in immune system modulation and anti-cancer applications.",
+    image: dsip,
+    inStock: false,
+    comingsoon: true,
+    variants: [
+      { id: "dsip-10mg", title: "10mg", available: true },
+    ],
+  },
+  {
+    id: "kisspeptine",
+    title: "Kisspeptin",
+    handle: "kisspeptine",
+    description: "Kisspeptin – a synthetic peptide researched for its potential in immune system modulation and anti-cancer applications.",
+    image: kisspeptine,
+    inStock: false,
+    comingsoon: true,
+    variants: [
+      { id: "kisspeptine-10mg", title: "10mg", available: true },
+    ],
+  },
+  {
+    id: "snap8",
+    title: "SNAP8",
+    handle: "snap8",
+    description: "SNAP8 (Synthetic Neuropeptide) – a synthetic peptide researched for its potential in immune system modulation and anti-cancer applications.",
+    image: snap8,
+    inStock: false,
+    comingsoon: true,
+    variants: [
+      { id: "snap8-10mg", title: "10mg", available: true },
     ],
   },
 ];
