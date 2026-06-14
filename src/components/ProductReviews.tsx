@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { useReviews, type Review } from "@/hooks/useReviews";
 
-const WHATSAPP_NUMBER = "919360500020"; // e.g. "919876543210"
+const WHATSAPP_NUMBER = "919360500020";
 
 const AVATAR_COLORS = ["bg-blue-500/10 text-blue-400", "bg-green-500/10 text-green-400", "bg-amber-500/10 text-amber-400", "bg-purple-500/10 text-purple-400"];
 
