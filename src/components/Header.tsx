@@ -3,12 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, MessageCircle, X, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CartDrawer } from "@/components/CartDrawer";
+import { getWhatsAppUrl } from "@/lib/siteLocation";
 import logo from "@/assets/logo.jpg";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const whatsappUrl = getWhatsAppUrl("Hello%20I%20am%20interested%20in%20your%20products");
 
   const scrollToSection = (id: string) => {
     setIsMenuOpen(false);
@@ -47,8 +49,8 @@ export const Header = () => {
   Chat on Instagram
 </a> */}
             
-            <a
-  href="https://wa.me/919360500020?text=Hello%20I%20am%20interested%20in%20your%20products"
+<a
+  href={whatsappUrl}
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => setIsMenuOpen(false)}
@@ -74,8 +76,8 @@ export const Header = () => {
               <Link to="/#products" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("products")}>Products</Link>
               <Link to="/#about" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("about")}>About</Link>
               <Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("contact")}>Contact</Link>
-              <a
-  href="https://wa.me/919360500020?text=Hello%20I%20am%20interested%20in%20your%20products"
+<a
+  href={whatsappUrl}
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => setIsMenuOpen(false)}

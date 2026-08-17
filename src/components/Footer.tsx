@@ -1,10 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { Mail, MapPin, Phone , Instagram, MessageCircle} from "lucide-react";
+import { getWhatsAppNumber, getWhatsAppUrl } from "@/lib/siteLocation";
 import logo from "@/assets/logo.jpg";
 
 export const Footer = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const whatsappNumber = getWhatsAppNumber();
+  const whatsappUrl = getWhatsAppUrl("Hello%20I%20want%20more%20details");
 
   const handleHashLink = (id: string) => {
     if (isHome) {
@@ -50,7 +53,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>+91 93605 00020</span>
+                <span>{whatsappNumber.display}</span>
               </li>
               {/* <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Instagram className="w-5 h-5 text-primary flex-shrink-0" />
@@ -67,7 +70,7 @@ export const Footer = () => {
 
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
   <a
-    href="https://wa.me/919360500020?text=Hello%20I%20want%20more%20details"
+    href={whatsappUrl}
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-3 hover:text-primary transition-colors"

@@ -341,6 +341,7 @@ import { useCartStore } from "@/stores/cartStore";
 import { Loader2, ShoppingCart, Minus, Plus, Trash2, Dna } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
+import { getStoredSiteLocation, getWhatsAppUrl } from "@/lib/siteLocation";
 
 const registrationSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -360,6 +361,7 @@ const Register = () => {
   const { items, updateQuantity, removeItem, clearCart } = useCartStore();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof RegistrationData, string>>>({});
+  const phonePlaceholder = getStoredSiteLocation() === "dubai" ? "+971 50 123 4567" : "+91 98765 43210";
   const [form, setForm] = useState<RegistrationData>({
     name: "", email: "", phone: "", address: "", city: "", state: "", pincode: "", notes: "",
   });
@@ -423,7 +425,7 @@ const Register = () => {
         `*Products:*%0A${productSummary}%0A%0A` +
         `*Notes:* ${form.notes || "None"}`;
 
-      const waUrl = `https://wa.me/919360500020?text=${waMessage}`;
+      const waUrl = getWhatsAppUrl(waMessage);
 
       // 5. Finalize UX
       toast.success("Registration Sent!Confirm your order with a text. Redirecting to WhatsApp...");
@@ -561,7 +563,7 @@ const Register = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1.5">Phone Number *</label>
-                    <Input type="tel" value={form.phone} onChange={e => handleChange("phone", e.target.value)} placeholder="+91 93605 00020" className="bg-secondary/30 border-border focus:border-primary" />
+                    <Input type="tel" value={form.phone} onChange={e => handleChange("phone", e.target.value)} placeholder={phonePlaceholder} className="bg-secondary/30 border-border focus:border-primary" />
                     {errors.phone && <p className="text-xs text-destructive mt-1">{errors.phone}</p>}
                   </div>
 

@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { getStoredSiteLocation, setStoredSiteLocation, type SiteLocation } from "@/lib/siteLocation";
 import Index from "./pages/Index";
 import ProductDetail from "./pages/ProductDetail";
 import Register from "./pages/Register";
@@ -25,6 +26,7 @@ const ScrollToTop = () => {
 const RESEARCH_CONFIRMATION_KEY = "research-purpose-confirmed";
 
 const App = () => {
+  const [siteLocation, setSiteLocation] = useState<SiteLocation | null>(() => getStoredSiteLocation());
   const [hasConfirmedResearchUse, setHasConfirmedResearchUse] = useState(() => {
     if (typeof window === "undefined") {
       return false;
@@ -32,6 +34,15 @@ const App = () => {
 
     return window.localStorage.getItem(RESEARCH_CONFIRMATION_KEY) === "true";
   });
+
+  const needsLocationSelection = !siteLocation;
+  const needsResearchConfirmation = siteLocation && !hasConfirmedResearchUse;
+  const isEntryBlocked = needsLocationSelection || needsResearchConfirmation;
+
+  const selectLocation = (location: SiteLocation) => {
+    setStoredSiteLocation(location);
+    setSiteLocation(location);
+  };
 
   const confirmResearchUse = () => {
     window.localStorage.setItem(RESEARCH_CONFIRMATION_KEY, "true");
@@ -41,7 +52,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className={hasConfirmedResearchUse ? "" : "pointer-events-none blur-sm transition-[filter] duration-200"}>
+        <div className={isEntryBlocked ? "pointer-events-none blur-sm transition-[filter] duration-200" : ""}>
           <Toaster />
           <Sonner />
           <BrowserRouter>
@@ -56,7 +67,7 @@ const App = () => {
           </BrowserRouter>
         </div>
 
-        <DialogPrimitive.Root open={!hasConfirmedResearchUse}>
+        <DialogPrimitive.Root open={isEntryBlocked}>
           <DialogPrimitive.Portal>
             <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-background/70 backdrop-blur-md" />
             <DialogPrimitive.Content
@@ -65,17 +76,38 @@ const App = () => {
               onInteractOutside={(event) => event.preventDefault()}
               onPointerDownOutside={(event) => event.preventDefault()}
             >
-              <DialogPrimitive.Title className="font-['Outfit'] text-2xl font-semibold leading-tight text-foreground">
-                Research Purposes Only
-              </DialogPrimitive.Title>
-              <DialogPrimitive.Description className="mt-3 text-sm leading-6 text-muted-foreground">
-                The peptides and related products on this website are intended strictly for laboratory research use
-                only. They are not for human consumption, medical use, diagnosis, treatment, or any household
-                application.
-              </DialogPrimitive.Description>
-              <Button className="mt-6 w-full" size="lg" onClick={confirmResearchUse}>
-                I Understand and Confirm
-              </Button>
+              {needsLocationSelection ? (
+                <>
+                  <DialogPrimitive.Title className="font-['Outfit'] text-2xl font-semibold leading-tight text-foreground">
+                    Choose Your Location
+                  </DialogPrimitive.Title>
+                  <DialogPrimitive.Description className="mt-3 text-sm leading-6 text-muted-foreground">
+                    Select your location so we can connect you with the right WhatsApp contact.
+                  </DialogPrimitive.Description>
+                  <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    <Button size="lg" onClick={() => selectLocation("india")}>
+                      India
+                    </Button>
+                    <Button size="lg" variant="secondary" onClick={() => selectLocation("dubai")}>
+                      Dubai
+                    </Button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <DialogPrimitive.Title className="font-['Outfit'] text-2xl font-semibold leading-tight text-foreground">
+                    Research Purposes Only
+                  </DialogPrimitive.Title>
+                  <DialogPrimitive.Description className="mt-3 text-sm leading-6 text-muted-foreground">
+                    The peptides and related products on this website are intended strictly for laboratory research use
+                    only. They are not for human consumption, medical use, diagnosis, treatment, or any household
+                    application.
+                  </DialogPrimitive.Description>
+                  <Button className="mt-6 w-full" size="lg" onClick={confirmResearchUse}>
+                    I Understand and Confirm
+                  </Button>
+                </>
+              )}
             </DialogPrimitive.Content>
           </DialogPrimitive.Portal>
         </DialogPrimitive.Root>

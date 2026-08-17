@@ -3,8 +3,7 @@ import { Star, Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { useReviews, type Review } from "@/hooks/useReviews";
-
-const WHATSAPP_NUMBER = "919360500020";
+import { getStoredSiteLocation, getWhatsAppUrl } from "@/lib/siteLocation";
 
 const AVATAR_COLORS = ["bg-blue-500/10 text-blue-400", "bg-green-500/10 text-green-400", "bg-amber-500/10 text-amber-400", "bg-purple-500/10 text-purple-400"];
 
@@ -82,6 +81,7 @@ function RatingSummary({ reviews }: { reviews: Review[] }) {
 
 export function ProductReviews({ productTitle }: { productTitle: string }) {
   const { allReviews, addReview } = useReviews();
+  const phonePlaceholder = getStoredSiteLocation() === "dubai" ? "e.g. +971 50 123 4567" : "e.g. +91 9876543210";
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [comment, setComment] = useState("");
@@ -96,7 +96,7 @@ export function ProductReviews({ productTitle }: { productTitle: string }) {
     addReview({ name, phone, rating, comment });
 
     const msg = `New review for ${productTitle}!\n\nName: ${name}\nMobile: ${phone}\nRating: ${"★".repeat(rating)}\nReview: ${comment}\n\nDate: ${new Date().toLocaleDateString()}`;
-    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+    const waUrl = getWhatsAppUrl(encodeURIComponent(msg));
 
     setSubmitted(true);
     toast.success("Review submitted! Opening WhatsApp...");
@@ -139,7 +139,7 @@ export function ProductReviews({ productTitle }: { productTitle: string }) {
             <input
               type="tel"
               className="w-full bg-secondary/30 border border-border rounded-xl px-4 py-2.5 text-sm text-foreground focus:outline-none focus:border-primary/50 transition-colors"
-              placeholder="e.g. +91 9876543210"
+              placeholder={phonePlaceholder}
               value={phone}
               onChange={e => setPhone(e.target.value)}
             />
