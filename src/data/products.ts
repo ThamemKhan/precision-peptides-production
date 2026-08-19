@@ -28,6 +28,61 @@ export interface ProductVariant {
   available: boolean;
 }
 
+export const productSeo: Record<string, { title: string; description: string }> = {
+  "bpc-157": {
+    title: "BPC-157 | Research Purpose | Precision Peptides",
+    description: "Body Protection Compound-157. A pentadecapeptide composed of 15 amino acids, widely studied for its regenerative and protective properties in research settings.",
+  },
+  retatrutide: {
+    title: "Retatrutide | Research Purpose | Precision Peptides",
+    description: "A triple-agonist peptide targeting GIP, GLP-1, and glucagon receptors. Actively researched for metabolic applications in clinical studies.",
+  },
+  "ghk-cu": {
+    title: "GHK-Cu | Research Purpose | Precision Peptides",
+    description: "Copper peptide GHK-Cu, a naturally occurring tripeptide studied for its role in tissue remodeling, wound healing, and anti-inflammatory research.",
+  },
+  "mots-c": {
+    title: "MOTS-C | Research Purpose | Precision Peptides",
+    description: "Mitochondrial-derived peptide MOTS-C, a 16-amino acid peptide studied for its role in metabolic homeostasis and exercise mimetics research.",
+  },
+  "tb-500": {
+    title: "TB-500 | Research Purpose | Precision Peptides",
+    description: "Thymosin Beta-4 fragment, a 43-amino acid peptide researched for its potential in tissue repair, cell migration, and anti-inflammatory pathways.",
+  },
+  "hgh-191aa": {
+    title: "HGH-191AA | Research Purpose | Precision Peptides",
+    description: "Human Growth Hormone fragment, a 191-amino acid peptide researched for its potential in muscle growth, fat loss, and anti-aging applications.",
+  },
+  semax: {
+    title: "SEMAX | Research Purpose | Precision Peptides",
+    description: "A synthetic heptapeptide (7 amino acids) derived from a fragment of the hormone ACTH, researched for its potential in cognitive enhancement, neuroprotection, and mood regulation.",
+  },
+  selank: {
+    title: "SELANK | Research Purpose | Precision Peptides",
+    description: "a synthetic peptide derived from the tuftsin sequence, studied for its potential in reducing anxiety, improving mood stability, and supporting cognitive function without sedative effects.",
+  },
+  pt141: {
+    title: "PT141 | Research Purpose | Precision Peptides",
+    description: "PT-141 (Bremelanotide) – a neuroactive peptide derived from melanocortins, known for enhancing libido in both men and women through central nervous system signaling.",
+  },
+  cjc_ipa: {
+    title: "CJC + IPA | Research Purpose | Precision Peptides",
+    description: "CJC + IPA (CJC-1295 + Ipamorelin) – a combination of two peptides researched for their potential in muscle growth, fat loss, and anti-aging applications.",
+  },
+  dsip: {
+    title: "DSIP | Research Purpose | Precision Peptides",
+    description: "DSIP (Drug-Sensitive Immunogenic Peptide) – a synthetic peptide researched for its potential in immune system modulation and anti-cancer applications.",
+  },
+  kisspeptine: {
+    title: "Kisspeptin | Research Purpose | Precision Peptides",
+    description: "Kisspeptin – a synthetic peptide researched for its potential in immune system modulation and anti-cancer applications.",
+  },
+  snap8: {
+    title: "SNAP8 | Research Purpose | Precision Peptides",
+    description: "SNAP8 (Synthetic Neuropeptide) – a synthetic peptide researched for its potential in immune system modulation and anti-cancer applications.",
+  },
+};
+
 /**
  * ─── EDIT PRODUCTS HERE ───
  * To change stock status, set `inStock` to true/false.

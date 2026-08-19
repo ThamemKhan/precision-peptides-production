@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PeptideChain3D } from "@/components/PeptideChain3D";
 import { Button } from "@/components/ui/button";
-import { getProductByHandle } from "@/data/products";
+import { getProductByHandle, productSeo } from "@/data/products";
 import { useCartStore } from "@/stores/cartStore";
 import { ArrowLeft, ShoppingCart, Minus, Plus, Shield, Truck, Award, Dna, Beaker, FlaskConical, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
@@ -22,6 +22,25 @@ const ProductDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [handle]);
+
+  useEffect(() => {
+    if (!product) return;
+
+    const previousTitle = document.title;
+    const descriptionTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    const previousDescription = descriptionTag?.content;
+    const seo = productSeo[product.handle];
+
+    document.title = seo.title;
+    descriptionTag?.setAttribute("content", seo.description);
+
+    return () => {
+      document.title = previousTitle;
+      if (descriptionTag && previousDescription !== undefined) {
+        descriptionTag.setAttribute("content", previousDescription);
+      }
+    };
+  }, [product]);
 
   if (!product) {
     return (
