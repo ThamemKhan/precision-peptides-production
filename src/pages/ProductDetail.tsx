@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { PeptideChain3D } from "@/components/PeptideChain3D";
 import { Button } from "@/components/ui/button";
 import { getProductByHandle, productSeo } from "@/data/products";
+import { ProductResearchContent } from "@/components/ProductResearchContent";
 import { useCartStore } from "@/stores/cartStore";
 import { ArrowLeft, ShoppingCart, Minus, Plus, Shield, Truck, Award, Dna, Beaker, FlaskConical, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
@@ -34,11 +35,56 @@ const ProductDetail = () => {
     document.title = seo.title;
     descriptionTag?.setAttribute("content", seo.description);
 
+    const metadataTags = [
+      { name: "keywords", content: seo.keywords },
+      { name: "research-content", content: seo.researchContent },
+    ].filter((tag): tag is { name: string; content: string } => Boolean(tag.content));
+    const previousMetadata = metadataTags.map(({ name, content }) => {
+      let tag = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
+      const created = !tag;
+      const previousContent = tag?.content;
+
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.name = name;
+        document.head.appendChild(tag);
+      }
+      tag.content = content;
+
+      return { tag, created, previousContent };
+    });
+
+    const structuredData = seo.researchContent ? document.createElement("script") : null;
+    if (structuredData) {
+      structuredData.type = "application/ld+json";
+      structuredData.dataset.productMetadata = product.handle;
+      structuredData.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        name: product.title,
+        description: seo.description,
+        additionalProperty: [{
+          "@type": "PropertyValue",
+          name: "Research information",
+          value: seo.researchContent,
+        }],
+      });
+      document.head.appendChild(structuredData);
+    }
+
     return () => {
       document.title = previousTitle;
       if (descriptionTag && previousDescription !== undefined) {
         descriptionTag.setAttribute("content", previousDescription);
       }
+      previousMetadata.forEach(({ tag, created, previousContent }) => {
+        if (created) {
+          tag.remove();
+        } else if (previousContent !== undefined) {
+          tag.content = previousContent;
+        }
+      });
+      structuredData?.remove();
     };
   }, [product]);
 
@@ -208,6 +254,7 @@ const ProductDetail = () => {
             </div>
           </div>
           <ProductReviews productTitle={product.title} />
+          <ProductResearchContent product={product} />
 
         </main>
 
