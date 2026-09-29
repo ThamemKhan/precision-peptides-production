@@ -35,6 +35,7 @@ export const Header = () => {
             <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => window.scrollTo(0, 0)}>Home</Link>
             <Link to="/#products" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("products")}>Products</Link>
             <Link to="/#about" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("about")}>About</Link>
+            <Link to="/research-library" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Research Library</Link>
             <Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("contact")}>Contact</Link>
             
             {/* <a
@@ -75,6 +76,7 @@ export const Header = () => {
               <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>Home</Link>
               <Link to="/#products" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("products")}>Products</Link>
               <Link to="/#about" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("about")}>About</Link>
+              <Link to="/research-library" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>Research Library</Link>
               <Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors font-medium" onClick={() => scrollToSection("contact")}>Contact</Link>
 <a
   href={whatsappUrl}

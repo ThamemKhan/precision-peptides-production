@@ -39,6 +39,7 @@ export const Footer = () => {
               <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
               <li><Link to="/#products" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => handleHashLink("products")}>Products</Link></li>
               <li><Link to="/#about" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => handleHashLink("about")}>About Us</Link></li>
+              <li><Link to="/research-library" className="text-muted-foreground hover:text-primary transition-colors">Research Library</Link></li>
               <li><Link to="/#contact" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => handleHashLink("contact")}>Contact</Link></li>
             </ul>
           </div>

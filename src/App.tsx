@@ -12,6 +12,16 @@ import ProductDetail from "./pages/ProductDetail";
 import Register from "./pages/Register";
 import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
+import ResearchLibrary from "./pages/ResearchLibrary";
+import HplcForPeptides from "./pages/HplcForPeptides";
+import PeptidePurityExplained from "./pages/PeptidePurityExplained";
+import WhatIsGhKCu from "./pages/WhatIsGhKCu";
+import PeptidesVsProteins from "./pages/PeptidesVsProteins";
+import PeptideBondExplained from "./pages/PeptideBondExplained";
+import PeptideSynthesis from "./pages/PeptideSynthesis";
+import SolidPhasePeptideSynthesis from "./pages/SolidPhasePeptideSynthesis";
+import WhatIsTb500 from "./pages/WhatIsTb500";
+import WhatArePeptides from "./pages/WhatArePeptides";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +72,16 @@ const App = () => {
               <Route path="/product/:handle" element={<ProductDetail />} />
               <Route path="/register" element={<Register />} />
               <Route path="/thank-you" element={<ThankYou />} />
+              <Route path="/research-library" element={<ResearchLibrary />} />
+              <Route path="/research-library/hplc-for-peptides" element={<HplcForPeptides />} />
+              <Route path="/research-library/peptide-purity-explained" element={<PeptidePurityExplained />} />
+              <Route path="/research-library/what-is-ghk-cu" element={<WhatIsGhKCu />} />
+              <Route path="/research-library/peptides-vs-proteins" element={<PeptidesVsProteins />} />
+              <Route path="/research-library/peptide-bond-explained" element={<PeptideBondExplained />} />
+              <Route path="/research-library/peptide-synthesis" element={<PeptideSynthesis />} />
+              <Route path="/research-library/solid-phase-peptide-synthesis" element={<SolidPhasePeptideSynthesis />} />
+              <Route path="/research-library/what-is-tb-500" element={<WhatIsTb500 />} />
+              <Route path="/research-library/what-are-peptides" element={<WhatArePeptides />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
