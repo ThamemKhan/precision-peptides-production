@@ -22,6 +22,8 @@ import PeptideSynthesis from "./pages/PeptideSynthesis";
 import SolidPhasePeptideSynthesis from "./pages/SolidPhasePeptideSynthesis";
 import WhatIsTb500 from "./pages/WhatIsTb500";
 import WhatArePeptides from "./pages/WhatArePeptides";
+import WhatAreAminoAcids from "./pages/AminoAcids";
+import PeptideVsProteinVsAminoAcid from "./pages/PeptideVsProteinVsAminoAcid"
 
 const queryClient = new QueryClient();
 
@@ -82,6 +84,11 @@ const App = () => {
               <Route path="/research-library/solid-phase-peptide-synthesis" element={<SolidPhasePeptideSynthesis />} />
               <Route path="/research-library/what-is-tb-500" element={<WhatIsTb500 />} />
               <Route path="/research-library/what-are-peptides" element={<WhatArePeptides />} />
+              <Route path="/research-library/what-are-amino-acids" element={<WhatAreAminoAcids />} />
+              <Route
+                path="/research-library/peptide-vs-protein-vs-amino-acid"
+                element={<PeptideVsProteinVsAminoAcid />}
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
