@@ -66,7 +66,7 @@ const ResearchLibrary = () => {
           <div className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
           <div className="container relative mx-auto max-w-4xl px-4 text-center">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-              <BookOpen className="h-4 w-4" /> Research Library
+              <BookOpen className="h-4 w-4" /> Blogs
             </div>
             <h1 className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Clear answers for <span className="gradient-text">better research</span></h1>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">Explore practical, educational guidance on peptide documentation, testing, and analytical records.</p>
