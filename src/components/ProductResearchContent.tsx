@@ -180,6 +180,21 @@ const Snap8ResearchContent = () => {
   return <section className="container mx-auto px-4 pb-20"><article className="mx-auto max-w-4xl rounded-2xl border border-border bg-card/60 p-6 sm:p-10"><h2 className="font-display text-3xl font-bold text-foreground">Snap-8 Peptide</h2><div className="mt-8 space-y-4 leading-relaxed text-muted-foreground">{content.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article></section>;
 };
 
+const CatalogResearchContent = ({ product }: { product: Product }) => {
+  const content = productSeo[product.handle]?.researchContent ?? "";
+
+  return (
+    <section className="container mx-auto px-4 pb-20">
+      <article className="mx-auto max-w-4xl rounded-2xl border border-border bg-card/60 p-6 sm:p-10">
+        <h2 className="font-display text-3xl font-bold text-foreground">{productSeo[product.handle]?.title ?? product.title}</h2>
+        <div className="mt-8 space-y-4 leading-relaxed text-muted-foreground">
+          {content.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        </div>
+      </article>
+    </section>
+  );
+};
+
 export const ProductResearchContent = ({ product }: { product: Product }) =>
   product.handle === "bpc-157" ? <Bpc157ResearchContent />
     : product.handle === "retatrutide" ? <RetatrutideResearchContent />
@@ -191,5 +206,6 @@ export const ProductResearchContent = ({ product }: { product: Product }) =>
                 : product.handle === "cjc_ipa" ? <CjcIpaResearchContent />
                   : product.handle === "dsip" ? <DsipResearchContent />
                     : product.handle === "kisspeptine" ? <KisspeptinResearchContent />
-                      : product.handle === "snap8" ? <Snap8ResearchContent />
+                        : product.handle === "snap8" ? <Snap8ResearchContent />
+                          : ["ss31", "glutathione", "kpv", "tesmorelin"].includes(product.handle) ? <CatalogResearchContent product={product} />
                         : null;

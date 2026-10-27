@@ -10,7 +10,12 @@ import pt141 from "@/assets/pt141.png";
 import dsip from "@/assets/dsip.png";
 import cjc_ipa from "@/assets/cjc_ipa.png";
 import snap8 from "@/assets/snap8.png";
-import kisspeptine from "@/assets/kisspeptine.png"
+import kisspeptine from "@/assets/kisspeptine.png";
+import ss31 from "@/assets/ss31.png";
+import kpv from "@/assets/kpv.png";
+import glutathione from "@/assets/glutathione.png";
+import tesmorelin from "@/assets/tesmorelin.png";
+
 export interface Product {
   id: string;
   title: string;
@@ -479,6 +484,94 @@ Snap-8 remains primarily an ingredient of cosmetic and laboratory research. Resu
 
 Research and Cosmetic Use: Snap-8 peptide is discussed here in the context of cosmetic and research applications. It should not be presented as a replacement for medical procedures or as a treatment for a medical condition. Product use should follow the manufacturer's formulation and safety instructions.`,
   },
+  ss31: {
+    title: "SS-31 Peptide | Mitochondrial Research",
+    description: "Explore SS-31 (elamipretide) research, including mitochondrial membrane interactions, cardiolipin, oxidative stress, and cellular energy pathways.",
+    keywords: "SS-31 peptide, SS31 peptide, elamipretide, SS-31 research, mitochondrial peptide research, cardiolipin research, mitochondrial membrane, oxidative stress research, cellular energy research, SS-31 mechanism of action",
+    researchContent: `SS-31 Peptide: Mitochondrial Research
+
+SS-31, also known as elamipretide, is a synthetic tetrapeptide studied for its interactions with mitochondrial membranes. Research has examined how SS-31 associates with cardiolipin and mitochondrial processes in experimental models.
+
+SS-31 and Mitochondrial Function
+
+Researchers investigate SS-31 in relation to mitochondrial structure, electron transport, and cellular energy pathways. These studies aim to better understand mitochondrial biology and should be interpreted within the model and conditions used.
+
+Oxidative Stress and Cardiolipin Research
+
+Research has explored the relationship between SS-31, cardiolipin, and markers of oxidative stress. Findings from laboratory and preclinical studies do not by themselves establish clinical benefit or safety for other uses.
+
+Evaluating SS-31 Research
+
+When reviewing SS-31 studies, consider the experimental model, dose and formulation used in that study, measured outcomes, and whether the findings have been independently replicated. Research materials should be supported by appropriate identity and analytical documentation.
+
+Research Use Only: Information about SS-31 is provided for educational and laboratory research purposes only. It is not medical advice or a recommendation for personal use.`
+  },
+  glutathione: {
+    title: "Glutathione Research | Antioxidant and Cellular Pathways",
+    description: "Explore glutathione research on antioxidant defense, redox balance, cellular metabolism, and related biochemical pathways.",
+    keywords: "glutathione research, reduced glutathione, GSH, antioxidant research, redox balance, oxidative stress research, cellular detoxification pathways, glutathione metabolism, glutathione peptide research",
+    researchContent: `Glutathione: Antioxidant and Cellular Research
+
+Glutathione is a tripeptide composed of glutamate, cysteine, and glycine. It is studied for its role in cellular redox balance and antioxidant systems across a range of biological models.
+
+Glutathione and Redox Balance
+
+Research examines reduced and oxidized glutathione as part of cellular responses to oxidative conditions. The balance between these forms is one measure used to investigate redox processes; results depend on the sample, assay, and experimental design.
+
+Glutathione Metabolism Research
+
+Scientists study glutathione synthesis, recycling, and interactions with enzymes and other cellular pathways. These topics help characterize biochemical function but do not establish that a particular product has a therapeutic effect.
+
+Evaluating Glutathione Studies
+
+Interpret findings in light of the biological model, measurement method, material identity, and study limitations. Claims related to detoxification, skin effects, or treatment should not be inferred from general biochemical research.
+
+Research Use Only: Information is provided for educational and laboratory research purposes only. It is not medical advice or a recommendation for personal use.`
+  },
+  kpv: {
+    title: "KPV Peptide | Inflammation Pathway Research",
+    description: "Explore KPV peptide research, including its relationship to alpha-MSH, inflammatory signaling, and experimental models of gut and skin biology.",
+    keywords: "KPV peptide, KPV research, Lys-Pro-Val, alpha-MSH tripeptide, inflammatory signaling research, gut inflammation research, skin biology research, KPV mechanism of action, peptide research",
+    researchContent: `KPV Peptide: Inflammation Pathway Research
+
+KPV (Lys-Pro-Val) is a tripeptide sequence associated with alpha-melanocyte-stimulating hormone (alpha-MSH). Research has investigated KPV in experimental settings focused on inflammatory signaling and related biological pathways.
+
+KPV and Inflammatory Signaling
+
+Laboratory studies have explored how KPV may interact with pathways involved in inflammatory responses. The scope of those findings depends on the specific cells, organisms, and methods used in each study.
+
+Gut and Skin Biology Research
+
+KPV has been examined in models related to intestinal and skin biology. Preclinical findings are preliminary and should not be treated as evidence of an established treatment or personal-use outcome.
+
+Evaluating KPV Research
+
+Review the exact sequence, material characterization, study design, controls, and replication when assessing research involving KPV. Evidence for a related molecule or a different experimental preparation may not apply directly.
+
+Research Use Only: Information about KPV is provided for educational and laboratory research purposes only. It is not medical advice or a recommendation for personal use.`
+  },
+  tesmorelin: {
+    title: "Tesamorelin (Tesmorelin) | GHRH Analog Research",
+    description: "Explore tesamorelin research as a growth hormone-releasing hormone analog, including GH/IGF-1 signaling and body-composition studies.",
+    keywords: "tesamorelin, tesmorelin, tesamorelin research, GHRH analog, growth hormone releasing hormone analog, GH signaling research, IGF-1 research, body composition research, tesamorelin mechanism",
+    researchContent: `Tesamorelin (Tesmorelin): GHRH Analog Research
+
+Tesamorelin is a synthetic analog of growth hormone-releasing hormone (GHRH). Research examines its activity in the pituitary growth hormone axis and related downstream signaling, including insulin-like growth factor 1 (IGF-1).
+
+Growth Hormone Signaling Research
+
+Studies of tesamorelin investigate GHRH receptor signaling and resulting changes in growth hormone secretion in defined clinical or experimental contexts. Tesamorelin is a prescription medicine approved in the United States for a specific indication; that approval does not establish it as a general weight-loss, bodybuilding, or anti-aging treatment.
+
+Body-Composition Research
+
+Research has evaluated body-composition outcomes in particular populations and study settings. Findings should be interpreted in context and should not be generalized beyond the populations and outcomes studied.
+
+Evaluating Tesamorelin Research
+
+When reviewing studies, consider the participant population or experimental model, study design, measured outcomes, safety monitoring, and applicable regulatory context. Product identity and formulation also matter when assessing research materials.
+
+Research Use Only: This information is educational and is not medical advice, prescribing guidance, or a recommendation for personal use.`
+  },
 };
 
 /**
@@ -580,7 +673,7 @@ export const products: Product[] = [
     id: "selank",
     title: "SELANK",
     handle: "selank",
-    description: "a synthetic peptide derived from the tuftsin sequence, studied for its potential in reducing anxiety, improving mood stability, and supporting cognitive function without sedative effects.",
+    description: "A synthetic peptide derived from the tuftsin sequence, studied for its potential in reducing anxiety, improving mood stability, and supporting cognitive function without sedative effects.",
     image: selank,
     inStock: true,
     comingsoon: false,
@@ -628,7 +721,7 @@ export const products: Product[] = [
     id: "kisspeptine",
     title: "Kisspeptin",
     handle: "kisspeptine",
-    description: "Kisspeptin – a synthetic peptide researched for its potential in immune system modulation and anti-cancer applications.",
+    description: "A peptide researched for its role in regulating reproductive hormones and stimulating the release of gonadotropin-releasing hormone (GnRH), with potential applications in fertility and reproductive health.",
     image: kisspeptine,
     inStock: true,
     comingsoon: false ,
@@ -640,7 +733,7 @@ export const products: Product[] = [
     id: "snap8",
     title: "SNAP8",
     handle: "snap8",
-    description: "SNAP8 (Synthetic Neuropeptide) – a synthetic peptide researched for its potential in immune system modulation and anti-cancer applications.",
+    description: "SNAP-8 (Acetyl Octapeptide-3) – a synthetic peptide researched for its potential cosmetic applications in reducing the appearance of expression lines and wrinkles by modulating pathways involved in facial muscle contraction.",
     image: snap8,
     inStock: true,
     comingsoon: false,
@@ -648,6 +741,55 @@ export const products: Product[] = [
       { id: "snap8-10mg", title: "10mg", available: true },
     ],
   },
+  {
+    id: "ss31",
+    title: "SS31",
+    handle: "ss31",
+    description: "A mitochondria-targeting peptide researched for its potential to improve mitochondrial function, reduce oxidative stress, and support cellular energy production, with applications under investigation in mitochondrial and age-related conditions.",
+    image: ss31,
+    inStock: true,
+    comingsoon: false,
+    variants: [
+      { id: "ss31-10mg", title: "10mg", available: true },
+    ],
+  },
+  {
+    id: "kpv",
+    title: "KPV",
+    handle: "kpv",
+    description: "A short peptide derived from alpha-melanocyte-stimulating hormone (α-MSH), researched for its potential anti-inflammatory properties and applications involving intestinal inflammation and skin-related inflammatory conditions.",
+    image: kpv,
+    inStock: true,
+    comingsoon: false,
+    variants: [
+      { id: "kpv-10mg", title: "10mg", available: true },
+    ],  
+  },
+  {
+    id: "glutathione",
+    title: "Glutathione",
+    handle: "glutathione",            
+    description: "A naturally occurring antioxidant researched for its role in protecting cells against oxidative stress, supporting cellular detoxification pathways, and maintaining antioxidant balance, with additional interest in skin pigmentation and skin-brightening applications.",
+    image: glutathione,
+    inStock: true,
+    comingsoon: false,
+    variants: [
+      { id: "glutathione-10mg", title: "10mg", available: true },
+    ],
+  },
+  {
+    id: "tesmorelin",
+    title: "Tesmorelin",
+    handle: "tesmorelin",
+    description: "a synthetic growth hormone-releasing hormone (GHRH) analogue researched for its effects on growth hormone secretion and body composition. It is an FDA-approved prescription treatment for excess abdominal fat in adults with HIV-associated lipodystrophy, but it is not approved as a general weight-loss or bodybuilding treatment.",
+    image: tesmorelin,
+    inStock: true,
+    comingsoon: false,
+    variants: [
+      { id: "tesmorelin-10mg", title: "10mg", available: true },
+    ],      
+  }
+
 ];
 
 export function getProductByHandle(handle: string): Product | undefined {
